@@ -1,2 +1,8 @@
 *.class
 *.log
+.gradle
+.idea
+build
+gradle
+out
+stale_outputs_checked
