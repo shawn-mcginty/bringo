@@ -1,7 +1,6 @@
 *.class
 *.log
 .gradle
-.idea
 build
 gradle
 out
