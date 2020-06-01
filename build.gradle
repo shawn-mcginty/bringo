@@ -12,6 +12,12 @@ dependencies {
     implementation 'com.github.finagle:finchx-core_2.13:0.32.1'
     implementation 'ch.qos.logback:logback-classic:1.3.0-alpha5'
     implementation 'com.typesafe.scala-logging:scala-logging_2.13:3.9.2'
+    implementation 'com.github.finagle:finchx-circe_2.13:0.32.1'
+    implementation 'io.circe:circe-generic_0.24:0.13.0'
+    implementation 'org.tpolecat:doobie-core_2.13:0.9.0'
+    implementation 'org.tpolecat:doobie-postgres_2.13:0.9.0'
+    implementation 'org.tpolecat:doobie-hikari_2.13:0.9.0'
+    implementation 'org.postgresql:postgresql:42.2.12'
     testImplementation 'org.scalatest:scalatest_0.24:3.1.2'
     testImplementation 'com.github.finagle:finchx-core_2.13:0.32.1'
 }
