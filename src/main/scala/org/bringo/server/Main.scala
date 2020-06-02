@@ -26,9 +26,6 @@ object Main extends IOApp {
     val logger = Logger("org.bringo.server.Main")
     logger.info("Hello")
 
-    for {
-      n <- sql"select 42".query[Int].unique.transact(xa)
-      _ <- IO(println(n))
-    } yield ExitCode.Success
+    IO(ExitCode.Success)
   }
 }
