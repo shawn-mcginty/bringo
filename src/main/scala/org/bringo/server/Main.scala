@@ -1,31 +1,15 @@
 package org.bringo.server
 
-import com.typesafe.scalalogging.Logger
-import cats.effect._
-import cats.implicits._
-import doobie._
-import doobie.implicits._
-import doobie.hikari._
+import org.springframework.context.annotation.Configuration
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.boot.SpringApplication
 
-object Main extends IOApp {
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+class Server
 
-  val transactor: Resource[IO, HikariTransactor[IO]] =
-    for {
-      ce <- ExecutionContexts.fixedThreadPool[IO](32)
-      be <- Blocker[IO]
-      xa <- HikariTransactor.newHikariTransactor[IO](
-        "org.postgresql.Driver", // driver classname
-        "jdbc:postgresql:bringo_dev", // connection string
-        "bringo",
-        "bringo1",
-        ce,
-        be)
-    } yield xa
-
-  def run (args: List[String]): IO[ExitCode] = transactor.use { xa =>
-    val logger = Logger("org.bringo.server.Main")
-    logger.info("Hello")
-
-    IO(ExitCode.Success)
-  }
+object Main extends App {
+  SpringApplication.run(classOf[Server])
 }
