@@ -1,17 +1,28 @@
 package org.bringo.server.controllers
 
-import org.fusesource.scalate.TemplateEngine
-import org.springframework.web.bind.annotation.{GetMapping, ResponseBody}
-import org.springframework.stereotype.Controller
+import org.bringo.server.models.LoginForm
+import org.bringo.server.views.LoginPage
+import org.springframework.web.bind.annotation.{GetMapping, ModelAttribute, PostMapping, RestController}
+import org.springframework.web.servlet.ModelAndView
 
-@Controller
+@RestController
 class LoginController {
-	val engine = new TemplateEngine
-	val loginPageMarkup: String = engine.layout("templates/login.mustache")
 
 	@GetMapping(Array("/login"))
-	@ResponseBody
-	def loginPage(): String = {
-		loginPageMarkup
+	def loginPage(): ModelAndView = {
+		val v = new LoginPage()
+		val mav = new ModelAndView()
+		mav.setView(v)
+		mav
+	}
+
+	@PostMapping(Array("/login"))
+	def loginForm(@ModelAttribute form: LoginForm): ModelAndView = {
+		println(form.uname)
+		println(form.pdub)
+		val v = new LoginPage()
+		val mav = new ModelAndView()
+		mav.setView(v)
+		mav
 	}
 }

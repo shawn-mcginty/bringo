@@ -24,3 +24,9 @@ dependencies {
 }
 
 mainClassName = 'org.bringo.server.Main'
+
+task webpack(type: Exec) {
+    commandLine "npm", "run", "build"
+}
+
+compileScala.dependsOn webpack

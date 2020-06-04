@@ -5,3 +5,7 @@ build
 gradle
 out
 stale_outputs_checked
+src/main/resources/public/dist
+src/main/js/**/*.js
+node_modules
+lib

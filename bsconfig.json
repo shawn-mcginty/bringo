@@ -1,0 +1,22 @@
+{
+  "name": "bs",
+  "version": "0.1.0",
+  "sources": {
+    "dir" : "src/main/js",
+    "subdirs" : true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+  ],
+  "warnings": {
+    "error" : "+101"
+  },
+  "reason": {
+    "react-jsx": 3
+  },
+  "refmt": 3
+}
