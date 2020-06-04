@@ -6,7 +6,7 @@ gradle
 out
 stale_outputs_checked
 src/main/resources/public/dist
-src/main/js/**/*.js
+frontend/**/*.js
 node_modules
 lib
 .merlin

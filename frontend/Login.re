@@ -1,0 +1,1 @@
+ReactDOMRe.renderToElementWithId(<LoginPage name="John" />, "login-page-app");
