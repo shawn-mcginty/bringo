@@ -1,0 +1,1 @@
+ReactDOMRe.renderToElementWithId(<ErrorPage />, "error-page-app");

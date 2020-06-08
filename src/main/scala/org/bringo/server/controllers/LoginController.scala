@@ -18,8 +18,6 @@ class LoginController {
 
 	@PostMapping(Array("/login"))
 	def loginForm(@ModelAttribute form: LoginForm): ModelAndView = {
-		println(form.uname)
-		println(form.pdub)
 		val v = new LoginPage()
 		val mav = new ModelAndView()
 		mav.setView(v)

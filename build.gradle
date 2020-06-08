@@ -29,4 +29,8 @@ task compileJs(type: Exec) {
     commandLine "npm", "run", "build"
 }
 
+task installJs(type: Exec) {
+    commandLine "npm", "install"
+}
+
 compileJava.dependsOn compileJs

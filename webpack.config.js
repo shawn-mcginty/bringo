@@ -12,4 +12,10 @@ module.exports = [{
        filename: 'login.js',
        path: path.resolve(__dirname, 'src/main/resources/public/dist'),
      },
-}];
+}, {
+        entry: path.resolve(__dirname, 'frontend/Error.bs.js'),
+        output: {
+          filename: 'error.js',
+          path: path.resolve(__dirname, 'src/main/resources/public/dist'),
+        },
+   }];

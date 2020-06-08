@@ -2,7 +2,7 @@
 *.log
 .gradle
 build
-gradle
+gradle/wrapper/gradle-wrapper.jar
 out
 stale_outputs_checked
 src/main/resources/public/dist
