@@ -1,1 +1,1 @@
-Js.Console.log("yo");
+ReactDOMRe.renderToElementWithId(<MainPage />, "main-page-app");

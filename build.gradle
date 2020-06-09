@@ -26,11 +26,16 @@ dependencies {
 mainClassName = 'org.bringo.server.Main'
 
 task compileJs(type: Exec) {
+    inputs.files(fileTree("frontend"), "bsconfig.json", "webpack.config.js", "package.json")
+    outputs.dir "src/main/resources/public/dist"
     commandLine "npm", "run", "build"
 }
 
 task installJs(type: Exec) {
+    inputs.files "bsconfig.json", "webpack.config.js", "package.json"
+    outputs.dir "node_modules"
     commandLine "npm", "install"
 }
 
+compileJs.dependsOn installJs
 compileJava.dependsOn compileJs
