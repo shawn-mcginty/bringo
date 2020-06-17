@@ -12,4 +12,9 @@ let classes: list(MaterialUi_WithStyles.style) = [
     name: "pageTopMargin",
     styles: ReactDOMRe.Style.make(~marginTop="7vh", ()),
   },
+  {
+    name: "navIcon",
+    styles: ReactDOMRe.Style.make(~color="#ffffff", ~marginRight="10px", ()),
+  },
+  {name: "mainPaper", styles: ReactDOMRe.Style.make(~paddingTop="76px", ())},
 ];

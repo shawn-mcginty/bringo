@@ -121,3 +121,34 @@ module LockOpenTwoTone =
     [@bs.module "@material-ui/icons/LockOpenTwoTone"]
     external reactClass: React.component('a) = "default";
   });
+
+//Menu
+module MenuFilled =
+  Make({
+    [@bs.module "@material-ui/icons/Menu"]
+    external reactClass: React.component('a) = "default";
+  });
+
+module MenuOutlined =
+  Make({
+    [@bs.module "@material-ui/icons/MenuOutlined"]
+    external reactClass: React.component('a) = "default";
+  });
+
+module MenuRounded =
+  Make({
+    [@bs.module "@material-ui/icons/MenuRounded"]
+    external reactClass: React.component('a) = "default";
+  });
+
+module MenuSharp =
+  Make({
+    [@bs.module "@material-ui/icons/MenuSharp"]
+    external reactClass: React.component('a) = "default";
+  });
+
+module MenuTwoTone =
+  Make({
+    [@bs.module "@material-ui/icons/MenuTwoTone"]
+    external reactClass: React.component('a) = "default";
+  });

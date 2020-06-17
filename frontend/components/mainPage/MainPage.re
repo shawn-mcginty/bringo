@@ -3,6 +3,17 @@ let make = () =>
   <MaterialUi_WithStyles
     classes=SharedClasses.classes
     render={classes =>
-      MaterialUi.(<section> <Container maxWidth=`Md /> </section>)
+      MaterialUi.(
+        <>
+          <NavBar classes />
+          <main>
+            <Container maxWidth=`Md>
+              <Paper className=classes##mainPaper>
+                {React.string("test")}
+              </Paper>
+            </Container>
+          </main>
+        </>
+      )
     }
   />;
