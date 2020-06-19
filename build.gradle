@@ -37,5 +37,10 @@ task installJs(type: Exec) {
     commandLine "npm", "install"
 }
 
+task cleanJs(type: Exec) {
+    commandLine "npm", "run", "clean"
+}
+
 compileJs.dependsOn installJs
 compileJava.dependsOn compileJs
+clean.dependsOn cleanJs

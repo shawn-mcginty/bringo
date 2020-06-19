@@ -17,4 +17,14 @@ let classes: list(MaterialUi_WithStyles.style) = [
     styles: ReactDOMRe.Style.make(~color="#ffffff", ~marginRight="10px", ()),
   },
   {name: "mainPaper", styles: ReactDOMRe.Style.make(~paddingTop="76px", ())},
+  {
+    name: "footer",
+    styles:
+      ReactDOMRe.Style.make(
+        ~paddingTop="76px",
+        ~paddingBottom="12px",
+        ~color="rgba(0, 0, 0, 0.54)",
+        (),
+      ),
+  },
 ];

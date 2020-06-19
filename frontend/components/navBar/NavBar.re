@@ -1,7 +1,7 @@
 [@react.component]
 let make = (~classes) => {
   MaterialUi.(
-    <AppBar position=`Static>
+    <AppBar position=`Fixed>
       <Toolbar>
         <IconButton edge=`Start className=classes##navIcon>
           <Icons.MenuFilled />
