@@ -2,8 +2,10 @@
   <dictionary name="shawn">
     <words>
       <w>bringo</w>
+      <w>jdbc</w>
       <w>pdub</w>
       <w>postgre</w>
+      <w>postgresql</w>
       <w>uname</w>
     </words>
   </dictionary>

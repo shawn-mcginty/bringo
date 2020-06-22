@@ -10,13 +10,14 @@ repositories {
 }
 
 dependencies {
+    implementation 'de.mkammerer:argon2-jvm:2.7'
     implementation 'org.scala-lang:scala-library:2.13.2'
-//    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-core'
 //    implementation 'org.springframework.session:spring-session-jdbc'
     implementation 'org.scalatra.scalate:scalate-core_2.13:1.9.6'
-//    runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'org.postgresql:postgresql'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
